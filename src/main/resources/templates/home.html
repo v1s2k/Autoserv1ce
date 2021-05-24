@@ -1,0 +1,112 @@
+﻿<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${name}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet"/>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="header__body">
+
+            <nav class="header__menu">
+                <ul class="header__list">
+                    <li>
+                        <a class="header__link" th:href="@{/login}">Войти</a>
+                    </li>
+                    <li>
+                        <a class="header__link" href="#">О нас</a>
+                    </li>
+                    <li>
+                        <a class="header__link" th:href="@{/products}">Услуги</a>
+                    </li>
+                    <li class="stretched">
+                        <a class="header__link" href="#"></a>
+                    </li>
+
+                    <li>
+                        <a class="header__link" th:href="@{/admin/user}">Для сотрудников</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__burger">
+                <span></span>
+            </div>
+            <a class="header__logo" th:href="@{/}">
+                <b>ALSERVICE</b>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-------------offer--------------->
+<section class="offer">
+    <div class="offer__shadow">
+        <div class="container">
+            <h1 class="offer__title">‌‌‍‍‎‌‌‍‍‎‌‌‍‍‎‌‌‍‍‎‌‌‍‍‎‌‌‍‍‎‌‌‍‍‎‌‌‍‍‎</h1>
+            <p class="offer__subtitle">
+                ALSERVICE осуществляет ремонт и техническое обслуживание автомобилей из Америки, Азии и Европы.
+            </p>
+
+        </div>
+    </div>
+
+</section>
+
+<!-----Секция "О нас"---->
+<section class="about">
+    <div class="container">
+        <div class="top-title">О нас</div>
+        <div class="info">
+            На станциях нашего сервиса обслуживаются автомобили любой марки, любого года выпуска и технического состояния.
+            Мы берем на ремонт даже самые сложные машины.
+        </div>
+    </div>
+</section>
+<br><br><br><br><br>
+
+<!--Секция с каталогами товаров-->
+<section>
+    <div class="container">
+        <div class="top-title">Каталог</div>
+        <div class="catalog">
+            <a th:href="@{/products}" class="catalog__item">
+                <img src="https://autoremclub.ru/wp-content/uploads/a1_201912141944581-1024x768.jpg" class="catalog__image">
+                <div class="catalog__title">Шиномонтаж</div>
+            </a>
+            <a th:href="@{/products}" class="catalog__item">
+                <img src="https://autoremclub.ru/wp-content/uploads/kia-oil-changes-1200x9001-1-1024x768.jpg" class="catalog__image">
+                <div class="catalog__title">Плановое ТО</div>
+            </a>
+            <a th:href="@{/products}" class="catalog__item">
+                <img src="https://autoremclub.ru/wp-content/uploads/b44d8c9s-19201-e1615978585921-1024x768.jpg"
+                     class="catalog__image">
+                <div class="catalog__title">Ремонт двигателя</div>
+            </a>
+            <a th:href="@{/products}" class="catalog__item">
+                <img src="https://autoremclub.ru/wp-content/uploads/foto-blog-kopie.png" class="catalog__image">
+                <div class="catalog__title">Ремонт КПП</div>
+            </a>
+            <a th:href="@{/products}" class="catalog__item">
+                <img src="https://autoremclub.ru/wp-content/uploads/c2592a973294c4a3d57ab0b54c643b9d_generic.jpg" class="catalog__image">
+                <div class="catalog__title">Защита автомобиля</div>
+            </a>
+            <a th:href="@{/products}" class="catalog__item">
+                <img src="https://autoremclub.ru/wp-content/uploads/programmyi-dlya-diagnostiki-avto-12-e1615980091593.jpg" class="catalog__image">
+                <div class="catalog__title">Электронная диагностика</div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="title">ALSERVICE <br>
+        2009-2021
+    </div>
+</footer>
+<script src="https://kit.fontawesome.com/c5e7c95c4e.js" crossorigin="anonymous"></script>
+</body>
+</html>

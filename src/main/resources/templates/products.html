@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Каталог</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link href="main.css" th:href="@{/css/main.css}" rel="stylesheet"/>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="header__body">
+            <nav class="header__menu">
+                <ul class="header__list">
+                    <li>
+                        <a class="header__link" th:href="@{/}">О нас</a>
+                    </li>
+                    <li>
+                        <a class="header__link" th:href="@{/products}">Продукция</a>
+                    </li>
+                    <li class="stretched">
+                        <a class="header__link" href="#">Помощь</a>
+                    </li>
+                    <li>
+                        <a class="header__link" href="#">Войти</a>
+                    </li>
+                    <li>
+                        <a class="header__link" href="#">Оформить заказ</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__burger">
+                <span></span>
+            </div>
+            <a class="header__logo" th:href="@{/}">
+                <b>ALSERVICE</b>
+            </a>
+        </div>
+    </div>
+</header>
+<br><br><br><br><br><br><br><br><br><br>
+<div class="container">
+    <div class="products" th:each="el : ${map}">
+        <div class="products-caption" style="text-align: center; color: #4c2822">
+            <b><p th:text="${el.key.name}"></p></b>
+        </div>
+        <div class="catalog">
+            <div class="catalog__item catalog__item-cart" th:each="product: ${el.value}">
+                <a th:href="'/products/' + ${product.id}">
+                    <img th:src="@{'/images/' + ${product.image} }"
+                         class="catalog__item-photo">
+                </a>
+                <div class="catalog-desc">
+                    <div class="catalog-desc__title" th:text="${product.name}"></div>
+                    <div class="catalog-desc-price">
+                        <div class="catalog-desc-price__price" th:text="${product.price}"></div>
+                        <a href="#" class="catalog-desc-price__buy">Купить</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

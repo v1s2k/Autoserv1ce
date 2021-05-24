@@ -1,0 +1,494 @@
+﻿/* ------------ОБНУЛЕНИЕ-------- */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    line-height: 1;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: #4c2822;
+}
+
+ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+button,
+button:active,
+button:focus {
+    outline: none;
+    outline-width: 0 !important;
+}
+
+/* ----------ШРИФТЫ---------------- */
+@font-face {
+    font-family: 'Montserrat500';
+    src: url('../fonts/Montserrat-Regular.eot');
+    src: url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserrat-Regular.woff') format('woff'),
+    url('../fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat300';
+    src: url('../fonts/Montserrat-Light.eot');
+    src: url('../fonts/Montserrat-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserrat-Light.woff') format('woff'),
+    url('../fonts/Montserrat-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* ----------- Общие стили --------------- */
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 15px;
+    font-family: Montserrat500, serif;
+}
+
+body {
+    font-family: Montserrat300, serif;
+    font-size: 16px;
+    background-color: #E5E5E5;
+}
+
+.main__btn {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 1);
+    font-family: Montserrat500, serif;
+    text-transform: uppercase;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: #4fcf21;
+    box-shadow: 0 5px 5px 0 #000000;
+    margin: 0 auto;
+}
+
+.main__btn:active {
+    box-shadow: 0 2px 5px 0 #000000;
+}
+
+h2 {
+    font-size: 36px;
+    font-family: RobotoMono-Regular, serif;
+    color: rgba(44, 42, 38, 1);
+    text-align: center;
+}
+
+header,
+section {
+    background-color: #E5E5E5;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 11;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #E5E5E5;
+    z-index: 10;
+}
+
+.header__body {
+    height: 70px;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.header__menu {
+    width: 100%;
+    color:black;
+}
+
+.header__list {
+    display: flex;
+    align-items: center;
+}
+
+.header__list li {
+    padding: 5px 12px;
+    position: relative;
+    z-index: 12;
+}
+
+.header__list li.stretched {
+    flex: 1 1 auto;
+}
+
+.header__list li a {
+    font-family: Montserrat500, serif;
+    transition: all 0.3s ease 0s;
+}
+
+.header__burger {
+    display: none;
+}
+
+.header__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 12;
+
+    font-family: RobotoMono-Regular;
+    font-size: 20px;
+    color: rgba(44, 42, 38, 1);
+
+}
+
+/* -----------offer------------- */
+.offer {
+    background: url(https://www.baikap.de/fileadmin/Bilder/Familienholding/bavaria_industries_case_tristone.jpg) no-repeat center top/ cover;
+    width: 100%;
+    text-align: center;
+
+
+}
+
+.offer__shadow {
+    box-shadow: -3px 250px 100px 10px #E5E5E5 inset;;
+    width: 100%;
+    height: 100%;
+    padding: 100px 0 190px 0;
+}
+
+.offer__title {
+    font-family: RobotoMono-Regular;
+    font-size: 50px;
+    color: rgba(44, 42, 38, 1);
+}
+
+.offer__subtitle {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 22px;
+    max-width: 730px;
+    margin: 24px auto 50px auto;
+}
+
+.wave {
+    margin-bottom: -40px;
+}
+
+/*Секция "О нас"*/
+.top-title {
+    margin: 0 auto;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 36px 0 40px;
+    /* position: relative; */
+}
+
+
+.top-title::after {
+
+    content: "";
+    display: block;
+    width: 75px;
+    height: 3px;
+    background-color: rgba(0, 0, 255, 0.5);
+    margin: 30px auto 0;
+}
+
+.info {
+    letter-spacing: 4px;
+    line-height: 2;
+    margin-bottom: -40px;
+    font-family: RobotoMono-Regular;
+    font-size: 20px;
+    color: rgba(44, 42, 38, 1);
+}
+
+.main_info {
+    background-color: grey;
+    margin: 100px 0;
+}
+
+/*=============================================================================*/
+/* Каталог */
+.catalog {
+    margin: 30px -10px;
+    margin-top: 131px;
+}
+
+.catalog {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: flex-start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: flex-start;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    justify-content: space-evenly;
+    margin: 30px -10px;
+}
+
+.catalog__item {
+    justify-content: flex-start;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.catalog__item:hover {
+    opacity: 0.9;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+
+}
+
+.catalog__image {
+    width: 360px;
+    height: 297px;
+}
+
+.catalog__title {
+    display: inline-block;
+
+    color: #4c2822;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+/*=============================================================================*/
+
+.catalog__item-cart {
+    margin: 9px;
+    width: 277px;
+    -webkit-transition: .1s ease;
+    -o-transition: .1s ease;
+    transition: .1s ease;
+}
+
+.catalog-desc {
+    font-size: 16px;
+}
+
+.catalog-desc__title {
+    font-size: 18px;
+    text-decoration: none;
+    color: #000;
+}
+
+.catalog-desc-price {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.catalog-desc-price__price {
+    margin-right: 10px;
+    position: relative;
+    padding-right: 20px;
+    border-right: 1px solid #c4c4c4;
+}
+
+.catalog__item-photo {
+    width: 280px;
+    height: 280px;
+}
+
+.products {
+    box-shadow: 0 7px 24px 3.7px rgba(91, 89, 89, .17);
+}
+
+/*------------Страница с продуктом-----------------------------------------------------------*/
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 7px 24.3px 3.7px rgba(91, 89, 89, .10);
+
+    padding: 0 10px;
+}
+
+.product-image {
+    display: flex;
+    align-items: center;
+}
+
+.product-img-big {
+    width: 371px;
+    height: 371px;
+}
+
+.product-info {
+    margin-left: 50px;
+    -webkit-box-flex: 1;
+    flex: 1 1 40%;
+}
+
+.parametrs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.tabs-header {
+    display: flex;
+    border-bottom: 2px solid #9f9f9f;
+}
+
+.tabs-header__item {
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #777;
+    font-weight: bold;
+}
+
+.tabs-content {
+    min-height: auto;
+    margin: 0;
+    color: #747474;
+    text-align: left;
+    border-bottom: 2px solid #9f9f9f;
+}
+
+.tabs-content__item {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.parametrs-price {
+    padding-right: 123px;
+    border-right: 2px solid #9f9f9f;
+}
+
+/*СЕКЦИЯ ФУТЕР*/
+.title {
+    background: url(https://pbs.twimg.com/profile_banners/706341596212539392/1457267353/1500x500) no-repeat center top/ cover;
+
+    /* border-radius: 10px 10px 0 0; */
+    height: auto;
+    text-align: center;
+    margin: 40px auto 0;
+    /* padding: 20px 0;*/
+    padding: 200px 15px 50px 15px;
+    position: relative;
+    overflow: hidden;
+
+    font-size: 20px;
+    color: white;
+}
+
+.title::after {
+    position: absolute;
+    content: '';
+    background-color: whitesmoke;
+    left: 0;
+    top: -35%;
+    width: 100%;
+    height: 200px;
+    border-radius: 50%;
+}
+.review {
+    width: 75%;
+    height: auto;
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 5px; /* скругление углов блока */
+    padding: 16px; /* внутренние поля */
+    margin: 16px auto; /* внешние отступы */
+    overflow: hidden;
+}
+.review img {
+    float: left; /* обтекание слева */
+    margin-right: 20px; /* пространство между аватаркой и абзацем */
+    border-radius: 50%; /* скругляет аватарку */
+    width: 90px;
+    height: 63px;
+}
+
+.review span {
+    font-size: 18px;
+    margin-right: 15px;
+}
