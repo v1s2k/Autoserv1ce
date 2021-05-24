@@ -51,7 +51,7 @@ a:hover,
 a:visited,
 a:active {
     text-decoration: none;
-    color: darkgoldenrod;
+    color: #4c2822;
 }
 
 ul li {
@@ -101,7 +101,7 @@ button:focus {
 body {
     font-family: Montserrat300, serif;
     font-size: 16px;
-    background-color: lightyellow;
+    background-color: #E5E5E5;
 }
 
 .main__btn {
@@ -129,7 +129,7 @@ h2 {
 
 header,
 section {
-    background-color: lightyellow;
+    background-color: #E5E5E5;
 }
 
 .header {
@@ -137,7 +137,6 @@ section {
     width: 100%;
     z-index: 11;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
-
 }
 
 .header::before {
@@ -147,22 +146,21 @@ section {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: black;
+    background-color: #E5E5E5;
     z-index: 10;
 }
 
 .header__body {
-    height: 100px;
+    height: 70px;
     position: relative;
     display: flex;
     justify-content: start;
     align-items: center;
-
 }
 
 .header__menu {
     width: 100%;
-
+    color:black;
 }
 
 .header__list {
@@ -196,8 +194,8 @@ section {
     transform: translate(-50%, -50%);
     z-index: 12;
 
-    font-family: ChelaOne-Regular;
-    font-size: 41px;
+    font-family: RobotoMono-Regular;
+    font-size: 20px;
     color: rgba(44, 42, 38, 1);
 
 }
@@ -231,7 +229,9 @@ section {
     margin: 24px auto 50px auto;
 }
 
-
+.wave {
+    margin-bottom: -40px;
+}
 
 /*Секция "О нас"*/
 .top-title {
@@ -413,23 +413,23 @@ section {
 
 .tabs-header {
     display: flex;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #9f9f9f;
 }
 
 .tabs-header__item {
     padding: 15px;
     text-transform: uppercase;
     font-size: 14px;
-    color: black;
+    color: #777;
     font-weight: bold;
 }
 
 .tabs-content {
     min-height: auto;
     margin: 0;
-    color: black;
+    color: #747474;
     text-align: left;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #9f9f9f;
 }
 
 .tabs-content__item {

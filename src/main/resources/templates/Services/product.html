@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${product.name}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link href="main.css" th:href="@{/css/main.css}" rel="stylesheet"/>
+</head>
+<body>
+
+<!--<div th:each="el: ${product}">-->
+<!--    <h1 th:text="${el.name}"></h1>-->
+<!--</div>-->
+
+<div class="container">
+
+    <h1 style="color: #4c2822; margin-bottom: 10px" th:text="${product.name}"/>
+    <div class="product">
+        <div class="product-image">
+            <img th:src="@{'/images/' + ${product.image} }" class="product-img-big">
+        </div>
+        <div class="product-info">
+            <div class="parametrs"/>
+            <div class="tabs">
+                <div class="tabs-header">
+                    <div class="tabs-header__item">Описание</div>
+                </div>
+                <div class="tabs-content">
+                    <div class="tabs-content__item" th:text="${product.description}" style="line-height: 1.5"/>
+                </div>
+                <div class="parametrs">
+                    <div class="parametrs-price">
+                        <p>Цена</p>
+                        <div th:text="${product.price}"/>
+                    </div>
+                    <div class="parametrs-button">
+                        <button>Купить!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--ОТЗЫВЫ-->
+<h2 style="text-align: center;color: #4c2822; margin-top: 40px; ">Наши контакты</h2>
+<div class="review">
+
+
+    <p style="margin-top: 10px">Старокалужское шоссе, 101<br>
+        +7(985)16166570<br>
+        пн-пт: 9-17<br>
+        сб-вс: 11-16<br>
+        info@avtoservis-moscow.ru</p>
+</div>
+
+
+<!--<div class="container">-->
+<!--    <form class="admin" th:action="@{/products/{id} }" th:object="${product}" method="post">-->
+<!--        <input type="text" th:field="*{id}" hidden/>-->
+<!--        <div class="form-group">-->
+<!--            <label for="productName">Название</label>-->
+<!--            <input type="text" class="form-control" id="productName" th:field="*{name}" required/>-->
+<!--        </div>-->
+<!--        <p><input type="submit" class="btn btn-primary" value="Добавить отзыв о продукте"/>-->
+<!--    </form>-->
+<!--</div>-->
+</body>
+</html>
