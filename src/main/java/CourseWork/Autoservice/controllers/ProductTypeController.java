@@ -21,7 +21,7 @@ public class ProductTypeController {
         return "productType-FORM/productTypeList";
     }
 
-    @GetMapping("/productTypeList/add")
+    @GetMapping("/productTypeList/add")//добавление каталога услуг
     public String productTypeListAdd(Model model) {
         ProductType productType = new ProductType();
         model.addAttribute("productType", productType);
