@@ -13,7 +13,7 @@ public class ProductTypeController {
     @Autowired
     ProductTypeRepository productTypeRepository;
 
-    /* -------------------------Контроллеры для редактипования и добавления типов продукта-------------------------*/
+   
     @GetMapping("/productTypeList")
     public String productTypeList(Model model) {
         Iterable<ProductType> types = productTypeRepository.findAll();
@@ -42,12 +42,12 @@ public class ProductTypeController {
         return "redirect:/admin/productTypeList";
     }
 
-    //    редактирование типа продукта
+    //    настройка каталога услуг
     @GetMapping("/productTypeList/edit/{productTypeId}")
     public String productTypeListEdit(@PathVariable("productTypeId") long id, Model model) {
         ProductType productType = productTypeRepository.findById(id).orElse(null);
         model.addAttribute("productType", productType);
         return "productType-FORM/productTypeForm";
     }
-    /*==============================================================================================================*/
+    
 }
